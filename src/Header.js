@@ -8,7 +8,7 @@ import { useStateValue } from "./StateProvider";
 import firebase from "firebase";
 
 function Header() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket, user }] = useStateValue();
   const handleAuthentication = () => {
     if (user) {
       firebase.auth().signOut();

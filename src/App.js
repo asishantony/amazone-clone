@@ -14,8 +14,6 @@ function App() {
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
     firebase.auth().onAuthStateChanged((authUser) => {
-      console.log("the user is ");
-      console.log(authUser);
       if (authUser) {
         //the user just logged in /the user was logged in
         dispatch({ type: "SET_USER", user: authUser });
